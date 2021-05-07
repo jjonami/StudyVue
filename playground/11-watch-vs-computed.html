@@ -19,22 +19,29 @@
         num: 10
       },
       computed: {
+        //validation, text, 간단한 연산에 적합
         doubleNum: function() {
           return this.num * 2;
         }
       },
       watch: {
+      //무거운 동작, 데이터 요청에 적합
         num: function(newValue, oldValue) {
           this.fetchUserByNumber(newValue);
         }
       },
       methods: {
         fetchUserByNumber: function(num) {
-          // console.log(num);
-          axios.get(num);
+          console.log(num);
+          //ex) HTTP 통신 axios.get(num);
         }
       }
     });
   </script>
 </body>
 </html>
+
+<!--
+  [watch] vs [computed] 공식 문서
+  https://vuejs.org/v2/guide/computed.html#ad
+-->
