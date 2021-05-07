@@ -1,7 +1,0 @@
-[Vue CLI 3.x]
-vue create '프로젝트 폴더 위치'
-
-ex)
-vue create vue-cli
-cd vue-cli
-npm run serve
